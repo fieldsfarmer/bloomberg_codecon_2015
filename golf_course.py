@@ -1,4 +1,4 @@
-
+# following https://github.com/kdungs/codecon/blob/master/src/golf.cc
 
 def solution(postion, target, steps):
 	mp = [
