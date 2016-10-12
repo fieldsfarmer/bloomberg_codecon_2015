@@ -1,4 +1,3 @@
-import sys
 import collections
 
 def matching_gloves(arr):
@@ -32,5 +31,12 @@ def main():
 	arr = ['abcde', 'edcba', 'abcde']
 	arr = ['ioi', 'ertre', 'ghhg']
 	print(matching_gloves(arr))
+
+	# sz = int(input())
+	# arr = []
+	# for i in range(sz):
+	# 	arr.append(input())
+	# print(matching_gloves(arr))
+	
 if __name__ == '__main__':
 	main()
