@@ -6,9 +6,9 @@ import sys
 from fractions import gcd
 
 def find_solution(max_money, price, other):
-    while max_money > 0 and (max_money % price) != 0:
+    while max_money >= 0 and (max_money % price) != 0:
         max_money -= other
-    if max_money <= 0:
+    if max_money < 0:
         return -1
     return max_money / price
 
