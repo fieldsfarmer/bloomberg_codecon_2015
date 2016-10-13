@@ -1,3 +1,10 @@
+#Problem        : Finals Spring 2015 - Maze Solver
+#Language       : Python 3
+#Compiled Using : py_compile
+#Version        : Python 3.4.3
+#Input for your program will be provided from STDIN
+#Print out all output from your program to STDOUT
+
 import sys
 
 def maze_solver(row, col, maze, start, end):
@@ -24,38 +31,33 @@ def helper(row, col, maze, start, end, path, v):
 	return False
 
 
+# data = sys.stdin.read().splitlines()
+# r_c = ''
+# maze = []
+# for line in data :
+#     if not r_c:
+#        r_c = line list(map(int, line.split()))
+#     else:
+#         maze.append(line)
 
+r_c = '8  8'
+maze = [
+	'XXXXXXXX',
+	'____X__X',
+	'XX_XX_XX',
+	'XX_____X', 
+	'XXXX_XXX', 
+	'X_____XX', 
+	'X_XXX___', 
+	'XXXXXXXX'
+]
 
-def main():
-	r_c = '8  8'
-	# r_c = input()
-	r_c = r_c.split()
-	r_c = list(map(int, r_c))
-	row = r_c[0]
-	col = r_c[1]
+r_c = list(map(int, r_c.split()))
+row = r_c[0]
+col = r_c[1]
 
-	maze = []
-	maze = [
-		'XXXXXXXX',
-		'____X__X',
-		'XX_XX_XX',
-		'XX_____X', 
-		'XXXX_XXX', 
-		'X_____XX', 
-		'X_XXX___', 
-		'XXXXXXXX'
-	]
-
-	# for l in sys.stdin:
-	# 	maze.append(l.strip())
-
-	# print(maze)
-	# print(r_c)
-	t = maze_solver(row,col,maze,(1,0),(row-2,col-1))
-	for u in t:
-		x,y = u
-		print(x, end=",")
-		print(y)
-
-if __name__ == '__main__':
-	main()
+t = maze_solver(row,col,maze,(1,0),(row-2,col-1))
+for u in t:
+	x,y = u
+	print(x, end=",")
+	print(y)
