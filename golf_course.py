@@ -1,4 +1,5 @@
 # following https://github.com/kdungs/codecon/blob/master/src/golf.cc
+import sys
 
 def solution(postion, target, steps):
 	mp = [
@@ -26,13 +27,12 @@ def helper(mp, postion, target, steps):
 		return 1
 	return 0
 
+steps = None
+data = sys.stdin.read().splitlines()
+# print(data)
+for line in data:
+   steps = int(line)
 
+# steps = 4
 
-def main():
-	steps = 4
-	steps = 1
-	# steps = int(input())
-	# print(solution(1,9,steps))
-	print(solution(1,6,steps))
-if __name__ == '__main__':
-	main()
+print(solution(1,9,steps))
